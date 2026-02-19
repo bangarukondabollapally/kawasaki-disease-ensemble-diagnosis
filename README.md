@@ -1,107 +1,181 @@
-# Kawasaki Disease Diagnosis Using a Feature-Optimized Weighted Ensemble Model
+🩺 Kawasaki Disease Diagnosis Using Feature-Optimized Weighted Ensemble Model
 
-## 📌 Overview
+A machine learning-based medical diagnosis system that predicts the risk of Kawasaki Disease using Modified Grey Wolf Optimization (MGWO) for feature selection and a weighted ensemble of Gradient Boosting and AdaBoost classifiers. The trained model is deployed using a Flask web application for real-time prediction.
 
-This project presents a machine learning-based diagnostic system for predicting Kawasaki Disease risk using a Feature-Optimized Weighted Ensemble Model.
+📌 Table of Contents
 
-The system integrates Modified Grey Wolf Optimization (MGWO) for feature selection and combines Gradient Boosting and AdaBoost classifiers using a weighted ensemble strategy to improve prediction accuracy and robustness.
+Project Overview
 
-A Flask-based web application is developed for real-time prediction.
+Features Used
 
----
+Model Workflow
 
-## 🎯 Objectives
+Project Structure
 
-- Perform data preprocessing and feature engineering
-- Apply Modified Grey Wolf Optimization (MGWO) for feature selection
-- Train individual classifiers (Gradient Boosting & AdaBoost)
-- Develop a Weighted Ensemble Model
-- Evaluate model using ROC and Confusion Matrix
-- Deploy model using Flask Web Application
+Installation & Setup
 
----
+Running the Application
 
-## 🧠 Selected Features (12)
+Evaluation Metrics
 
-After dropping irrelevant columns, the following optimized features were selected:
+Future Improvements
 
-1. Age at Diagnosis
-2. Gender
-3. Ethnicity
-4. Location
-5. Fever Duration
-6. Symptoms
-7. Laboratory Tests
-8. Echocardiography
-9. Treatment Approach
-10. Clinical Outcomes
-11. Complications
-12. Long-Term Effects
+Disclaimer
 
----
+📖 Project Overview
 
-## 🏗️ System Architecture
+This project focuses on building an intelligent disease prediction system by:
 
-Data Preprocessing  
-⬇  
-Feature Optimization (MGWO)  
-⬇  
-Individual Classifier Training  
-⬇  
-Weighted Ensemble Model  
-⬇  
-Model Evaluation  
-⬇  
-Flask Deployment  
+Performing data preprocessing and encoding
 
----
+Selecting optimal features using MGWO
 
-## ⚙️ Technologies Used
+Training individual machine learning models
 
-- Python
-- Scikit-learn
-- NumPy
-- Pandas
-- Matplotlib
-- Flask
-- Pickle (Model Serialization)
+Combining models using a weighted ensemble strategy
 
----
+Deploying the trained model using Flask
 
-## 📊 Model Details
+The goal is to improve diagnostic accuracy while maintaining model stability and interpretability.
 
-### Individual Models
-- Gradient Boosting Classifier
-- AdaBoost Classifier
+🧠 Selected Features (12)
 
-### Ensemble Strategy
-Final Prediction =  
-(weight_gb × GB Probability) + (weight_ada × Ada Probability)
+The final optimized features used for prediction are:
 
-This approach improves prediction stability and reduces overfitting.
+Age at Diagnosis
 
----
+Gender
 
-## 📈 Evaluation Metrics
+Ethnicity
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC Curve
-- Confusion Matrix
+Location
 
----
+Fever Duration
 
-## 🌐 Web Application
+Symptoms
 
-The system includes a Flask-based web interface where users can:
+Laboratory Tests
 
-- Enter patient details
-- Select categorical medical attributes
-- Predict Kawasaki Disease risk in real-time
+Echocardiography
 
----
+Treatment Approach
 
-## 📂 Project Structure
+Clinical Outcomes
 
+Complications
+
+Long-Term Effects
+
+⚙️ Model Workflow
+1️⃣ Data Preprocessing
+
+Handling missing values
+
+Encoding categorical variables
+
+Feature preparation
+
+2️⃣ Feature Optimization
+
+Modified Grey Wolf Optimization (MGWO)
+
+Selection of most relevant predictive attributes
+
+3️⃣ Individual Model Training
+
+Gradient Boosting Classifier
+
+AdaBoost Classifier
+
+4️⃣ Weighted Ensemble Strategy
+
+Final prediction probability is calculated as:
+
+Final_Probability =
+(weight_gb × GB_Probability) + (weight_ada × ADA_Probability)
+
+This improves performance by combining strengths of both models.
+
+5️⃣ Model Serialization
+
+Final ensemble model saved using pickle
+
+Used for deployment in Flask application
+
+🏗️ Project Structure
+kawasaki-disease-ensemble-diagnosis/
+│
+├── app.py                         # Flask application
+├── weighted_ensemble_model.pkl    # Serialized trained ensemble model
+├── README.md                      # Project documentation
+├── requirements.txt               # Required dependencies
+│
+└── templates/
+    ├── index.html                 # User input form
+    └── result.html                # Prediction output page
+
+🚀 Installation & Setup
+Step 1: Clone the Repository
+git clone https://github.com/yourusername/kawasaki-disease-ensemble-diagnosis.git
+
+Step 2: Navigate to Project Directory
+cd kawasaki-disease-ensemble-diagnosis
+
+Step 3: Install Required Libraries
+pip install -r requirements.txt
+
+
+If requirements file is unavailable:
+
+pip install flask numpy pandas scikit-learn matplotlib
+
+▶️ Running the Application
+
+Run the Flask app:
+
+python app.py
+
+
+Open your browser and go to:
+
+http://127.0.0.1:5000/
+
+
+Enter patient details and generate prediction results.
+
+📊 Evaluation Metrics
+
+The model performance was evaluated using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+ROC Curve
+
+Confusion Matrix
+
+🔮 Future Improvements
+
+Integrate SHAP for model interpretability
+
+Improve ensemble with stacking techniques
+
+Deploy on cloud platforms (Render / AWS)
+
+Validate using real-world clinical datasets
+
+Add database integration
+
+⚠ Disclaimer
+
+This project is developed for academic and research purposes only.
+It is not intended for real-world medical diagnosis without professional validation.
+
+👨‍💻 Author
+
+Developed as part of an academic project on AI-based healthcare prediction systems.
