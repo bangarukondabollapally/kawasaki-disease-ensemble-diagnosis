@@ -85,23 +85,21 @@ This improves performance by combining the strengths of both models.
 - Final ensemble model saved using `pickle`
 - Used for deployment in Flask application
 
----
-
 ## 🏗️ Project Structure
 
+```
 kawasaki-disease-ensemble-diagnosis/
 │
-├── app.py # Flask application
-├── weighted_ensemble_model.pkl # Serialized trained ensemble model
-├── README.md # Project documentation
-├── requirements.txt # Required dependencies
+├── app.py                         # Flask application
+├── weighted_ensemble_model.pkl    # Serialized trained ensemble model
+├── README.md                      # Project documentation
+├── requirements.txt               # Required dependencies
 │
 └── templates/
-├── index.html # User input form
-└── result.html # Prediction output page
+    ├── index.html                 # User input form
+    └── result.html                # Prediction output page
+```
 
-
----
 
 ## 🚀 Installation & Setup
 
